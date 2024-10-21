@@ -1,0 +1,311 @@
+e<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library management system</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #background{
+
+min-height: 1050px;
+width: 100%;
+
+}
+#top{
+height: 35px;
+width: 100%;
+background:#485f79;
+line-height: 35px;
+padding: 0px 20px 9px 100px;
+box-sizing: border-box;
+word-spacing:10px ;
+
+}
+#menu{
+height: 65px;
+width: 100%;
+background:rgb(156, 190, 156);
+
+}
+#logo{
+height: 65px;
+width: 40%;
+background:rgb(129, 92, 92);
+text-align: center;
+line-height: 65px;
+font-size: 40px;
+float: left;
+}
+#menu1{
+height: 65px;
+width: 60%;
+background:rgb(82, 55, 55);
+float: left;
+
+}
+#menu1 UL{
+list-style: none;
+padding-left: 200px;
+box-sizing: border-box;
+
+}
+#menu1 LI{
+height: 45px;
+width: 130px;
+
+text-align: center ; 
+display: inline-block; 
+line-height: 45px;
+transform: translateY(-5px);
+color: rgb(103, 94, 94);
+font-size: 20px;
+
+}
+#menu1 LI:hover{
+background: #8b9198;  
+color: white; 
+transition: all ease 1s;
+border-radius: 3px;
+}
+
+#slider{
+height:640px;
+width: 100%;
+background:url(image/4.jpg);
+background-size: cover;
+background-attachment: fixed;
+/* animation-name:slider;
+animation-duration: 20s;
+animation-iteration-count:infinite ;
+animation-delay: 3s;*/
+}
+/*
+@keyframes slider{
+
+from{
+    background:url(image/4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+to{
+    background:url(image/4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+} 
+}
+*/
+#x{
+height:640px;
+width: 40%;
+background:rgba(134, 121, 121, 0.4); 
+float: left;
+font-size: 41PX;
+color: white;
+text-align: center;
+padding-top: 250px;
+box-sizing: border-box;
+}
+#y{
+height:640px;
+width: 60%;
+background:rgba(44, 35, 35, 0.4); 
+float: left;
+
+
+}
+
+#l{
+height:450px;
+width: 60%;
+background:rgba(135, 78, 78, 0.6); 
+float: left; 
+margin: 90px;
+border-radius: 7px ;
+
+}
+#l:hover{
+background:linear-gradient(45deg,rgba(102, 131, 100, 0.6),rgba(255,255,255, .6));
+}
+
+
+#student{
+margin:50px 50px;
+color:rgb(153, 153, 191);
+
+}
+#Teacher{
+margin:50px 50px;
+color:rgb(130, 94, 94);
+}
+.t{
+height: 40px;
+width: 100%;
+border: 2px solid rgb(46, 94, 46);
+border-radius: 4px;
+box-sizing: border-box;
+margin-bottom: 15px;
+
+}
+#down{
+height: 300px;
+width: 100%;
+margin-top: 10px;
+background:#708398;
+text-align: center;
+padding-top: 10px;
+color: rgb(92, 51, 51);
+}
+.footer{
+height: 20px;
+width: 100%;
+background: rgb(94, 71, 71);
+color: rgb(155, 60, 60);
+text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div id="background">
+        <div id="top">
+            <a href="#" class="fa fa-envelope" style="text-decoration:none;  color: rgb(178, 128, 128);">
+                rutviboda@gmail.com
+              </a>
+              <a href="#" class="fa fa-phone" style="text-decoration:none; color: rgb(125, 77, 77);">
+                +91-1234567890
+              </a>
+              <a href="#" class="fa fa-facebook" style="text-decoration:none; padding:7px; float:right; color: rgb(187, 131, 131);"></a>
+              <a href="#" class="fa fa-instagram" style="text-decoration:none; padding:7px; float:right; color: rgb(164, 78, 78);"></a>
+              <a href="#" class="fa fa-twitter" style="text-decoration:none;  padding: 7px ; float:right; color: rgb(227, 106, 106);"></a>
+        </div>
+        <div id="menu">
+            <div id="logo">LIBRARY<b style="color:#616c78 ;">ZONE</b>
+            </div>
+            <div id="menu1">
+                <ul>
+                    <a href="index.html"><li class="fa fa-home">Home</li></a>
+                    <a href="#"><li class="fa fa-image">Gallery</li></a>
+                    <a href="admin.html"><li class="fa fa-user">Admin Login</li></a>
+                    <a href="register.html"><li class="fa fa-registered">Register</li></a>
+                    <a href="index.html"><li class="fa fa-user">Login</li></a>
+
+                </ul>
+            </div>   
+        </div>
+        <div id="slider">
+            <div id="x">WELCOME TO LIBRARY<b style="color: rgb(142, 142, 172);">ZONE</b>
+            <p style="font-size: 15PX;">Having fun isn't hard when you've got a library card.</p>
+            </div> 
+            <div id="y">
+                <div id="l">
+                    <h1 style=" text-align: center; color: #2c7ad6;">REGISTER</h1>
+                    <div class="container">
+                        <br><BR><BR>
+                        <h2 style="font-size: 40px;font-family: 'Times New Roman', Times, serif;">Registration Form</h2>
+                        <form id="registrationForm" onsubmit="return validateForm()">
+                            <div class="form-group">
+                                <label for="fullname">Full Name:</label>
+                                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" placeholder="Enter your password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number:</label>
+                                <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <script>
+                        function validateForm() {
+    // Get form values
+    const fullname = document.getElementById('fullname').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+    const phone = document.getElementById('phone').value;
+
+    // Regular expression for email validation
+    const emailPattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
+    // Regular expression for phone number validation (10 digits)
+    const phonePattern = /^[0-9]{10}$/;
+
+    // Validation checks
+    if (fullname === "") {
+        alert("Full Name is required.");
+        return false;
+    }
+
+    if (email === "" || !emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    if (password === "") {
+        alert("Password is required.");
+        return false;
+    }
+
+    if (confirmPassword === "") {
+        alert("Please confirm your password.");
+        return false;
+    }
+    if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return false;
+    }
+
+    if (phone === "" || !phonePattern.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return false;
+    }
+
+    // If all validations pass
+    alert("Registration successful!");
+    return true;
+}
+
+</script>
+                    
+
+                        
+                    </div>
+                </div>
+            </div> 
+          
+        </div>
+        <div id="down">
+            <h3>Stay Connected</h3>
+            <a href="#" class="fa fa-facebook" style="text-decoration: none; padding: 10px 12px;color: white; "></a>
+            <a href="#" class="fa fa-instagram" style="text-decoration: none; padding: 10px 12px;color: white;"></a>
+            <a href="#" class="fa fa-twitter" style="text-decoration: none; padding: 10px 12px;color: white;"></a>
+            <h2>Contact Address</h2>
+            <a href="#" class="fa fa-home" style="text-decoration: none; padding: 10px 12px;color: white; ">
+                KKV Circle, Rajkot
+                Gujrat-360005
+            </a> <br>
+            <a href="#" class="fa fa-phone" style="text-decoration: none; padding: 10px 12px;color: white;">
+              +91-1234567890
+            </a> <br>
+            <a href="#" class="fa fa-envelope" style="text-decoration: none; padding: 10px 12px; color:white;">
+              rutviboda@gmail.com
+              </a>
+        </div>
+        <div class="footer">Developed By : Rutvi </div>
+    </div>
+</body>
+</html>
